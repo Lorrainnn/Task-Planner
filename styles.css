@@ -1,0 +1,201 @@
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end; /* align content to the bottom */
+	height: 100vh; 
+	font-family: Titillium Web, Arial, sans-serif;
+	/* font we chose basing off online suggestions */
+	background-color: rgb(240, 240, 240);
+}
+
+h1 #task-header {
+	display: block;
+}
+.chat-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 5px; /* space above the footer */
+}
+
+/* start of task buttons */
+.edit-task, .delete-task {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 10px;
+}
+
+.edit-task:hover, .delete-task:hover {
+	transform: scale(1.3);
+	transition-duration: 0.2s;
+}
+
+.edit-task{
+	margin-right: 5px;
+}
+.delete-task{
+	margin-right: -10px;
+	margin-left: 15px;
+}
+
+/* end of task buttons */
+
+h1 {
+	/* for the title above the chatbox */
+	text-align: center;
+	font-size: 1.5rem;
+	color: #333;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+
+/* the dynamic times on top of the page*/
+#clock-display, #date-display { 
+	display: flex;
+	position: fixed;
+	top: 2%;
+	font-family: 'Titillium Web', sans-serif;
+	color: #333;
+}
+
+#clock-display {
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+#date-display {
+	font-size: 1.2rem;
+	margin-top: 35px;
+	color: #666;
+}
+
+#bot-box {
+	display: none;
+	justify-content: left; /* align content to the left */
+	position: fixed;
+	top: 12%;
+	left: 50%; /* position at the center horizontally */
+	transform: translateX(-50%); /* offset by 50% of its width to center horizontally */
+	width: 68%; /* a little thinner than the chat box to look better*/
+	padding: 0px 20px 0px 20px; 
+	border: 2px solid #ccc;
+	background-color: #fff;
+	border-radius: 12px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-buttons {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 15px; 
+	/* space between buttons and chatbox */
+}
+
+.action-buttons button {
+	padding: 10px 15px;
+	font-size: 0.95rem;
+	color: #fff;
+	background-color: #536881;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	/* the three primary buttons on the bottom */
+}
+
+.action-buttons button:hover {
+	background-color: #0056b3;
+}
+
+.chatbox {
+	display: none;
+	/* hidden at first, it'll only be used for tasks */
+	width: 70%;
+	height: 35px;
+	background-color: #fff;
+	border: 2px solid #ccc;
+	border-radius: 8px;
+	padding: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chatbox:focus-within {
+	border-color: #455c74;
+}
+
+input[type="text"] {
+	/* the chatbox's text that we input */
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	font-size: 0.98rem;
+}
+
+footer {
+	text-align: center;
+	padding: 10px 5px;
+	font-size: 0.9rem;
+	color: #555;
+	width: 100%;
+	/* the credits */
+}
+
+#notes-container {
+	position: fixed;
+	top: 95px;  
+	width: 95%; 
+	/* left: auto;
+	right: auto;   */
+	/* transform: translateX(-50%);   */
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+	max-height: 63%; /* set a maximum height so it doesn't cover the footer */
+	overflow-y: auto; /* enable scrolling when the content exceeds the height */
+	padding-bottom: 20px; /* space at the bottom to prevent clipping into the footer */
+}
+
+.note-box {
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%; 
+}
+
+.note-input {
+	width: 100%; /* ensure the note box is full width of its container */
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	resize: vertical;  /* restricts resizing textbox to vertical only */
+}
+
+#add-note-button {
+	margin-top: 10px;
+	padding: 15px;
+	width: 50px;  
+	height: 50px; 
+	color: black;
+	border: 3px solid #a3a3a3;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 50%;  /* perfectly round */
+	cursor: pointer;
+	text-align: center;
+	display: flex;  
+	justify-content: center;
+	align-items: center;  
+	position: relative;
+	margin-left: auto; 
+	margin-right: auto;
+	/* we had to try a lot to get it middle aligned perfectly */
+}
+
+#add-note-button:hover {
+	background-color: #ffffff;
+	transition-duration: 0.3s;
+}

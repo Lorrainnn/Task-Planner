@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- link to the Titillium Web font for consistent text styling, we found it to be nicest looking -->
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Group 8's Web Assistant</title>
+	<!-- link to external CSS file for styling the layout -->
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+	<!-- main container that holds all interactive elements like buttons, messages, and tasks-->
+	<div class="chat-container">
+		<div id="clock-display"></div>
+		<div id="date-display"></div>
+		
+		<!-- this is where bot messages will appear (not displayed on default) -->
+		<div id="bot-box">
+			<p id="chat-message">Placeholder message</p>
+		</div>
+
+		<h1>Welcome back, how can I help you?</h1>
+		
+		<!-- clickable buttons coded in the js script -->
+		<div class="action-buttons">
+			<button id="weather-button">🌤️ Weather</button>
+			<button id="new-task-button">📋 Tasks</button>
+			<button id="note-button">📝 Notes</button>
+		</div>
+		
+		<!-- our notes, not displayed on default -->
+		<div id="notes-container" style="display: none;">
+			<div id="note-list">
+				<!-- default note box, a list of it -->
+				<div class="note-box">
+					<textarea class="note-input" rows="5" cols="30" placeholder="Write your note here..."></textarea>
+				</div>
+			</div>
+			<!-- adding more note boxes -->
+			<button id="add-note-button">+</button>
+		</div>
+
+		<!-- this is only ever used to create/modify tasks -->
+		<div class="chatbox">
+			<input type="text" id="task-input" placeholder="Type a new task here..." />
+		</div>
+	</div>
+	<footer>
+		<p>© 2024, IN4MATX 133 (FALL24 | Group 8: Jixuan Luo, Ron Luo)</p>
+	</footer>
+
+	<script src="buttons.js"></script>
+</body>
+</html>
