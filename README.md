@@ -6,7 +6,7 @@ The project is a web-based assistant that allows users to manage tasks, track we
 	• Task Management: Users can add, edit, and delete tasks, with data stored in the browser’s local storage for persistence.
 	• Notes Management: Users can create and store notes, with the ability to add new ones and remove empty ones, all stored locally.
 	• Responsive Design: The app adapts to different screen sizes with a clean, minimalist design featuring Flexbox layouts, smooth transitions for button interactions, and a light gray background for readability.
-This is made by Jixuan Luo and Ron Luo
+This is made by Lorrainn and Ronnn
 
 ---
 
@@ -14,3 +14,9 @@ This is made by Jixuan Luo and Ron Luo
 Simply open the index.html file and it should be up and working!
 
 ---
+
+![alt text](src/image-1.png)
+
+![alt text](src/image-2.png)
+
+![alt text](src/image.png)
